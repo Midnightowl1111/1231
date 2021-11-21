@@ -1,0 +1,26 @@
+.Congrats {
+    z-index: 1000px;
+    position: absolute;
+    top: 200px;
+    left: 850px;
+}
+.display {
+    color:yellow;
+    background-color:black;
+    z-index: 1000px;
+    position: absolute;
+    top: 250px;
+    left: 800px;
+}
+.image2 {
+    z-index: 100px;
+    position: absolute;
+    top: 350px;
+    left: 640px;
+}
+.qr {
+    z-index: 100px;
+    position: absolute;
+    top: 80px;
+    left: 894px;
+}

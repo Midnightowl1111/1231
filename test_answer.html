@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="test_answer.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //사용자에게 새로고침 시키시면 안됩니다...야매코드라서 사용자 인식 따위없고 세션에 계속 갱신됨...쓰는 분들에게 사이트 여러번 들어가지말라고 해주세요.
+        window.onload = function() {
+            //sessionStorage.clear(); - 세션 값 초기화하는 코드입니다...테스트 끝나셨다면 테스트 후 이 코드 주석 없애서 한번 실행한 후 다시 주석처리하시면 됩니다
+            if (sessionStorage.getItem("ranking") != null) {
+                var num = parseInt(sessionStorage.getItem("ranking"))+1;
+                sessionStorage.setItem("ranking", num);
+            } else {
+                sessionStorage.setItem("ranking", "1");
+            }
+
+            var ranking = document.getElementById("ranking");
+            ranking.innerHTML = sessionStorage.getItem("ranking")+"등입니다!"; //이부분이 선착순 문구라서 수정원하시면 뒤의 "" 이부분 수정하시면 됩니다
+        }
+        //아마 사용자분들에게는 선착은 스샷으로 남기라고 하시면 될듯?
+    </script>
+</head>
+<body>
+    <div class="Congrats">축하합니다! 정답입니다!!</div>
+    <div class="display">QR 타고 들어가셔서 옾챗에 접속해주세요!</div>
+    <img src="qr.png" alt="" class="qr">
+    <img src="p2.png" alt="" class="image2">
+</body>
+</html>

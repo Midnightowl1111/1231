@@ -1,0 +1,18 @@
+.index-Question {
+    z-index: 1000px;
+    position: absolute;
+    top: 200px;
+    left: 710px;
+}
+.index-button {
+    z-index: 1000px;
+    position: absolute;
+    top: 250px;
+    left: 800px;
+}
+.image {
+    z-index: 100px;
+    position: relative;
+    top: 350px;
+    left: 600px;
+}

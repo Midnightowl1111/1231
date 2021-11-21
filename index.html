@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //**주의!!!! 이코드는 야매로 만들어져서 서버 부하나 보안이나 정확성에 신경쓰지 않아 XSS 공격등에 취약합니다. 사용자분들에게 이점 숙지시켜주세요!!**
+        function check() {
+            var res = document.getElementById("res2");
+            if (res.value == "PASTA") { //"res"<<이부분에 res 없애고 정답 넣으시면 됩니다
+                location.href="test_answer.html"; //이부분 쌍따옴표 안에 이동 원하시는 사이트 넣어주세요
+            } else {
+                var div = document.getElementById('change');
+                div.innerHTML = "오답입니다, 문제를 유심히 읽고 다시 답해주세요!"; //오답메세지
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="index-Question">5일의 걸쳐 받은 문제의 답들을 결합해 밑에다가 쳐주세요~</div> <!--여기에 퀴즈내용 넣어주세요-->
+    <form class="index-button">
+        <input type="text" id="res2" placeholder="정답">
+        <input type="button" value="확인" onclick="check();">
+        <div id="change"></div>
+    </form>
+    <img src="p1.png" alt="" class="image">
+</body>
+</html>
